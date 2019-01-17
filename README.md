@@ -28,6 +28,5 @@ nodejs-login study
 2.아래와 같이 api 사용위 위한 클라이언트 id와 키가 생성된다.
 ![n_ 3_](https://user-images.githubusercontent.com/29029016/51292491-3924e000-1a4e-11e9-9f83-1e7cd2eaa301.jpg)
 3.아래와 같은 창을 볼 수 있다.
-![n_ 3](https://user-images.githubusercontent.com/29029016/51291486-a6367680-1a4a-11e9-9b1b-25709a27ea5d.PNG)
-
+![n_ 4](https://user-images.githubusercontent.com/29029016/51292583-a8023900-1a4e-11e9-9537-547055cf1dfa.PNG)
 참조 : https://developers.naver.com/docs/login/web/#2--javascript%EB%A1%9C-%EB%84%A4%EC%9D%B4%EB%B2%84-%EC%95%84%EC%9D%B4%EB%94%94%EB%A1%9C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0
