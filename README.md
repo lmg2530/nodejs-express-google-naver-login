@@ -10,7 +10,7 @@ nodejs-login study
 3.클라이언트 ID를 만들기 위해서는 동의 화면이 필요한데 이를 위한 설정을 한다.(-->동의 화면 구성)
 ![3](https://user-images.githubusercontent.com/29029016/51290665-ba2ca900-1a47-11e9-9950-dd6ed68787a2.PNG)
 4.최소한 이름은 넣어야 동의 화면 구성이 구성이 된다.
-![4](https://user-images.githubusercontent.com/29029016/51290667-ba2ca900-1a47-11e9-85f5-0e698fe4c956.PNG)
+![inked 4_li](https://user-images.githubusercontent.com/29029016/51292633-d253f680-1a4e-11e9-8d33-b4f5f98012d2.jpg)
 5. 클라이언트 아이디를 만들기 위해 해당 애플리케이션 종류를 선택 한다.
 ![5](https://user-images.githubusercontent.com/29029016/51290668-ba2ca900-1a47-11e9-8ed3-b111044bd312.PNG)
 6. 생성이 되면 아래와 같이 키가 생성된다.
