@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<meta name="google-signin-client_id" content="#.apps.googleusercontent.com"> 
+		<!--content="#.apps.googleusercontent.com" -->
+		<script src="https://apis.google.com/js/platform.js" async defer></script> 
+		<!-- 구글 플랫폼 라이브러리를 추가  -->
+		<script>
+			function onSignIn(googleUser) { // 로그인이 완료되면 해당 함수가 호출되면서 googleUser 매개변수에 로그인 정보가 들어옴 
+			  var profile = googleUser.getBasicProfile();
+			  document.getElementById("userinfo1").innerHTML= 'ID: ' + profile.getId();
+			 // Do not send to your backend! Use an ID token instead.
+			  document.getElementById("userinfo2").innerHTML= 'Name: ' + profile.getName();
+			  document.getElementById("userinfo3").innerHTML ='image :'+'<image src ="'+profile.getImageUrl()+'">';
+			  document.getElementById("userinfo4").innerHTML='Email: ' + profile.getEmail();
+			  // This is null if the 'email' scope is not present.
+			  document.getElementById("userinfo5").innerHTML='Given Name: ' + profile.getGivenName();
+			  document.getElementById("userinfo6").innerHTML='Family Name: ' + profile.getFamilyName();
+		// 로그인 이후 서버에 토큰 보내기
+		var id_token = googleUser.getAuthResponse().id_token;
+		var xhr = new XMLHttpRequest();
+		xhr.open('POST', 'http://localhost:3003/login');
+		xhr.setRequestHeader('Content-Type', 'application/JSON');
+		//x-www-form-urlencoded
+		xhr.onload = function() {
+		  console.log('Signed in as: ' + xhr.responseText);
+		  alert(xhr.responseText)
+		};
+		xhr.send(JSON.stringify({'idtoken': id_token}));
+		}
+			function signOut() {
+		    var auth2 = gapi.auth2.getAuthInstance();
+		    auth2.signOut().then(function () { //로그아웃 처리
+		    auth2.disconnect ();
+		    window.location.href='/login'
+		    console.log('User signed out.');
+		    	});
+	  		}
+		</script>
+	</head>
+	<body>
+		<h1>hello this is Login Page</h1>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div> <!-- 로그인이 완료되면 onSignIn 실행 -->
+		<div id="userinfo1">test</div>
+		<div id="userinfo2">test2</div>
+		<div id="userinfo3">test2</div>
+		<div id="userinfo4">test4</div>
+		<div id="userinfo5">test5</div>
+		<div id="userinfo6">test6</div>
+		<a href="#" onclick="signOut();">Sign out</a>
+	</body>
+</html>
